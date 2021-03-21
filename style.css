@@ -58,7 +58,4 @@ div.intro{
   display: none;
   position: relative;
   height: 1000px;
-  background-image: url(./src/introbgpic.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%, 100%;
 }
