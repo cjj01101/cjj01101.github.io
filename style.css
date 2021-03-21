@@ -4,3 +4,13 @@ div.main{
   background-repeat: no-repeat;
   background-size: 100%, 100%;
 }
+
+div.fixed-btn{
+  position: fixed;
+  right: 3%;
+  bottom: 5%;
+  width: 50px;
+  border: 1px solid #eee;
+  font-size: 20px;
+  z-index: 999;
+}
