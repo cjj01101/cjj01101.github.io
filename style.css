@@ -54,5 +54,5 @@ div.main h1{
 }
 
 div.intro{
-  display: none;
+  position: relative;
 }
