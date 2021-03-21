@@ -12,6 +12,11 @@
             $("html,body").animate({scrollTop: 0}, 300);
         });
     });
+    $(document).ready(function(){
+        $(".down-btn").click(function(){
+            $("html,body").animate({scrollTop: $(".intro").scroll_offset.top}, 300);
+        });
+    });
     </script>
 </head>
 
@@ -23,7 +28,7 @@
         <p align = "center"><a href = "./Love-Letter"> Love Letter </a></p>
     </div>
     <div class="intro" height="500">
-        <p align = "center">test<br>test<br>test<br>test<br>test<br>test<br><br>test<br>test</p>
+        <p align = "center">test<br>test<br>test<br>test<br>test<br>test<br>test<br>test</p>
     </div>
     
     <div class="fixed-btn">
