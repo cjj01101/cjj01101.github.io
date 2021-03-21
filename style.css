@@ -57,5 +57,6 @@ div.main h1{
 div.intro{
   display: none;
   position: relative;
+  padding: 0 0 0 0;
   height: 800px;
 }
