@@ -17,7 +17,7 @@ div.main h1{
   font-size: 40px;
 }
 
-div.fixed-btn{
+.fixed-btn{
   position: fixed;
   right: 3%;
   bottom: 5%;
@@ -33,7 +33,7 @@ div.fixed-btn{
   align-items: center;
 }
 
-img.down-btn{
+.down-btn{
   position: absolute;
   width: 40px;
   height: 40px;
@@ -51,4 +51,8 @@ img.down-btn{
         transform: translatey(10px);
         opacity: 1;
     }
+}
+
+div.intro{
+  display: none;
 }
