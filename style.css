@@ -1,6 +1,6 @@
 div.main{
   height: 1000px;
-  background-image: linear-gradient(#ffffff, #e0ffff);
+  background-image: url(./src/bgpic.png);
   background-repeat: no-repeat;
   background-size: 100%, 100%;
 }
