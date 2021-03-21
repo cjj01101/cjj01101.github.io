@@ -10,6 +10,12 @@ div.main{
   background-size: 100%, 100%;
 }
 
+div.main h1{
+  margin: 0px;
+  padding-top: 250px;
+  font-size: 40px;
+}
+
 div.fixed-btn{
   position: fixed;
   right: 3%;
