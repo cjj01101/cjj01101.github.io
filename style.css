@@ -14,10 +14,7 @@ div.fixed-btn{
   border: 1px solid #eee;
   font-size: 15px;
   background-color: #ffffff;
-  z-index: 999;
-}
-
-div.fixed-btn p{
   display: inline-block;
   verticle-align: middle;
-}  
+  z-index: 999;
+}
