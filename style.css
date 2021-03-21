@@ -18,6 +18,6 @@ div.fixed-btn{
 }
 
 div.fixed-btn p{
-  text-align: center;
+  display: table-cell;
   verticle-align: middle;
 }  
