@@ -55,6 +55,7 @@ div.main h1{
 }
 
 div.intro{
+  display: none;
   position: relative;
   height: 1000px;
   background-image: url(./src/introbgpic.jpg);
