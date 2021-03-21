@@ -3,6 +3,7 @@ body{
 }
 
 div.main{
+  position: relative;
   padding: 0 0 0 0;
   height: 1000px;
   background-image: url(./src/bgpic.png);
@@ -30,4 +31,12 @@ div.fixed-btn{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+img.down-btn{
+  position: absolute;
+  width = 40;
+  height = 40;
+  left: 49%;
+  bottom: 60px;
 }
