@@ -16,3 +16,8 @@ div.fixed-btn{
   background-color: #ffffff;
   z-index: 999;
 }
+
+div.fixed-btn span{
+  text-align: center;
+  verticle-align: middle;
+}  
