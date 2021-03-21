@@ -12,5 +12,6 @@ div.fixed-btn{
   width: 50px;
   border: 1px solid #eee;
   font-size: 15px;
+  background-color: #ffffff;
   z-index: 999;
 }
