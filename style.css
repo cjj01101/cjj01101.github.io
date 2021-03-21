@@ -39,4 +39,16 @@ img.down-btn{
   height: 40px;
   left: 49%;
   bottom: 60px;
+  animation: move_down 1.5s infinite;
+}
+
+@keyframes move_down {
+    from {
+        transform: translatey(-10px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translatey(10px);
+        opacity: 1;
+    }
 }
