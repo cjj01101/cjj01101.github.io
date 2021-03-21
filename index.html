@@ -5,6 +5,14 @@
     <meta charset="utf-8">
     <title>CJJ Individual Page</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("div.fixed-btn p").click(function(){
+            $("html,body").animate({scrollTop: 0}, 300);
+        });
+    });
+    </script>
 </head>
 
 <body>
