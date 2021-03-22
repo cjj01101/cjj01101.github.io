@@ -8,7 +8,7 @@ div.main{
   height: 1000px;
   background-image: url(./src/bgpic.png);
   background-repeat: no-repeat;
-  background-size: 100%, 100%;
+  background-size: cover;
 }
 
 div.main h1{
