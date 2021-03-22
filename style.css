@@ -9,6 +9,7 @@ div.main{
   background-image: url(./src/bgpic.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 div.main h1{
