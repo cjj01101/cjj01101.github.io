@@ -40,6 +40,7 @@ div.main h1{
   height: 40px;
   left: 49%;
   bottom: 60px;
+  
   animation: move_down 1.5s infinite;
   -webkit-animation: move_down 1.5s infinite;
   cursor: pointer;
@@ -69,19 +70,21 @@ div.intro{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
   height: 100%;
 }
 
 div.intro .imgbox{
   height:100%;
   width:30%;
-  float:left
+  float:left;
 }
 
 div.intro .text{
   position: absolute;
-  margin-top: 50px;
   left: 30%;
   right: 0;
+  margin-top: 50px;
   text-align: center;
 }
