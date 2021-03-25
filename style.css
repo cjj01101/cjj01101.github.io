@@ -71,3 +71,16 @@ div.intro{
   transform: translate(-50%,-50%);
   height: 100%;
 }
+
+div.intro .imgbox{
+  height:100%;
+  width:30%;
+  float:left
+}
+div.intro .text{
+  position: absolute;
+  margin-top: 50px;
+  left: 30%;
+  right: 0;
+  text-align: center;
+}
