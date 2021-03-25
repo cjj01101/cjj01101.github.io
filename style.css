@@ -13,7 +13,6 @@ div.main{
 }
 
 div.main h1{
-  margin: 0px;
   padding-top: 250px;
   font-size: 40px;
 }
@@ -43,6 +42,7 @@ div.main h1{
   bottom: 60px;
   animation: move_down 1.5s infinite;
   -webkit-animation: move_down 1.5s infinite;
+  cursor: pointer;
 }
 
 @keyframes move_down {
