@@ -2,6 +2,8 @@
   margin: 0px;
 }
 
+h1{text-align: center;}
+
 .centerflex{
   display: flex;
   justify-content: center;
@@ -21,7 +23,6 @@ div.main{
 div.main h1{
   padding-top: 250px;
   font-size: 40px;
-  text-align: center;
 }
 
 .fixed-btn{
@@ -78,5 +79,9 @@ div.intro .textbox{
   position: absolute;
   left: 29%;
   right: 0;
-  margin-top: 50px;
+}
+
+div.intro .h1{
+  padding-top: 70px;
+  font-size: 45px;
 }
