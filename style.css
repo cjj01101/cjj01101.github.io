@@ -66,8 +66,6 @@ div.intro{
   height: 800px;
 }
 
-.imgbox {position:relative;}
-
 div.intro .imgbox{
   height:100%;
   width:29%;
@@ -75,7 +73,7 @@ div.intro .imgbox{
   overflow: hidden;
 }
 
-div.intro .text{
+div.intro .textbox{
   position: absolute;
   left: 29%;
   right: 0;
