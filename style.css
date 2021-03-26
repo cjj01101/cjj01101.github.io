@@ -2,6 +2,12 @@
   margin: 0px;
 }
 
+.centerflex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 div.main{
   position: relative;
   padding: 0 0 0 0;
@@ -27,10 +33,6 @@ div.main h1{
   font-size: 15px;
   background-color: #ffffff;
   z-index: 999;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
 }
 
@@ -65,25 +67,17 @@ div.intro{
 }
 
 .imgbox {position:relative;}
-.imgbox img{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  -moz-transform: translate(-50%,-50%);
-  height: 100%;
-}
 
 div.intro .imgbox{
   height:100%;
-  width:30%;
+  width:29%;
   float:left;
+  overflow: hidden;
 }
 
 div.intro .text{
   position: absolute;
-  left: 30%;
+  left: 29%;
   right: 0;
   margin-top: 50px;
   text-align: center;
