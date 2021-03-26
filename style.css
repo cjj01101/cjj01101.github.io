@@ -2,7 +2,7 @@
   margin: 0px;
 }
 
-h1{text-align: center;}
+h1, h2{text-align: center;}
 
 .centerflex{
   display: flex;
@@ -84,4 +84,13 @@ div.intro .textbox{
 div.intro h1{
   padding-top: 70px;
   font-size: 45px;
+  letter-spacing: 8px;
+}
+
+div.intro h2{
+  padding-top: 5px;
+  font-size: 25px;
+  transfrom: translate(-1.8%);
+  -webkit-transform: translate(-1.8%);
+  letter-spacing: 1px;
 }
