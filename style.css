@@ -21,6 +21,7 @@ div.main{
 div.main h1{
   padding-top: 250px;
   font-size: 40px;
+  text-align: center;
 }
 
 .fixed-btn{
