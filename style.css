@@ -81,6 +81,13 @@ div.intro .textbox{
   right: 0;
 }
 
+div.intro .textbox .textblock{
+  padding: 100px 20% 0 20%;
+  line-height: 170%;
+  font-family: 华文楷体;
+  font-size: 25px;
+}
+
 div.intro h1{
   padding-top: 70px;
   font-size: 45px;
