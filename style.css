@@ -12,7 +12,6 @@ h1, h2{text-align: center;}
 
 div.main{
   position: relative;
-  padding: 0 0 0 0;
   height: 1000px;
   background-image: url(./src/bgpic.png);
   background-repeat: no-repeat;
@@ -69,9 +68,9 @@ div.intro{
 }
 
 div.intro .imgbox{
-  height:100%;
-  width:29%;
-  float:left;
+  height: 100%;
+  width: 29%;
+  float: left;
   overflow: hidden;
 }
 
@@ -83,7 +82,7 @@ div.intro .textbox{
   background-color: #faf9d7cc;
 }
 
-div.intro .textbox .contentblock{
+div.intro .contentblock{
   padding: 100px 20% 0 20%;
   line-height: 170%;
   font-family: 华文楷体;
