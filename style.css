@@ -86,6 +86,8 @@ div.intro .contentblock{
   line-height: 170%;
   font-family: 华文楷体;
   font-size: 25px;
+  height: 200px;
+  justify-content: space-between;
 }
 
 div.intro h1{
