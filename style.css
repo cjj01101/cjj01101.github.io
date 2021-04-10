@@ -77,8 +77,10 @@ div.intro .imgbox{
 
 div.intro .textbox{
   position: absolute;
+  height: 100%;
   left: 29%;
   right: 0;
+  background-color: #faf9d7cc;
 }
 
 div.intro .textbox .contentblock{
