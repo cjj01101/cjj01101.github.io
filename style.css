@@ -84,10 +84,10 @@ div.intro .textbox{
 
 div.intro .contentblock{
   padding: 5% 16% 0 16%;
-  line-height: 170%;
+  height: 30%;
   font-family: 华文楷体;
   font-size: 1.5625em;
-  height: 30%;
+  line-height: 170%;
   justify-content: space-between;
 }
 
