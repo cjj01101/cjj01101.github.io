@@ -8,10 +8,10 @@
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script>
     $(document).ready(function(){
-        $(".intro .fixed-btn").click(function(){
+        $(".fixed-btn").click(function(){
             $("html,body").animate({scrollTop: 0}, 300);
         });
-        $(".down-btn").click(function(){
+        $(".main .down-btn").click(function(){
             $(".intro").show();
             $("html,body").animate({scrollTop: $(".intro").offset().top}, 500);
         });
@@ -28,7 +28,7 @@
     </div>
     <div class="intro">
         <div class="imgbox centerflex" style="float:left; width:29%">
-            <img src="./src/intropic1.jpg" alt="" height=100%>
+            <img src="./src/intropic1.jpg" alt="" height=100% loading="eager">
         </div>
         <div class="textbox">
             <h1>我是谁?</h1>
