@@ -8,7 +8,7 @@
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script>
     $(document).ready(function(){
-        $("div.fixed-btn").click(function(){
+        $(".intro .fixed-btn").click(function(){
             $("html,body").animate({scrollTop: 0}, 300);
         });
         $(".down-btn").click(function(){
@@ -23,8 +23,8 @@
     
     <div class="main">
         <h1>欢迎来到我的个人主页</h1>
-        <img class="down-btn" src="./src/down.png" alt="next" loading="eager">
         <p align="center"><a href = "./Love-Letter"> Love Letter </a></p>
+        <img class="down-btn" src="./src/down.png" alt="next" loading="eager">
     </div>
     <div class="intro">
         <div class="imgbox centerflex" style="float:left; width:29%">
@@ -39,16 +39,17 @@
                 <br>语言学习的业余爱好者
                 <br>动画与音游圈的边缘人
                 <br>生活方面的乐观主义者</p>
-                <img src="./src/intropic2.jpg" alt="" width="50%">
+                <img src="./src/intropic2.jpg" alt="" width="50%" loading="lazy">
             </div>
             <div class="contentblock centerflex">
-                <img src="./src/intropic3.png" alt="" width="48%">
+                <img src="./src/intropic3.png" alt="" width="48%" loading="lazy">
                 <p>想用游戏创作表达自我
                 <br>偏爱玩家成长而非角色成长
                 <br>相信语言是连接思想的最大桥梁
                 <br>妄想弄清万物背后的运转原理
                 <br>The world is awesome, isn't it?</p>
             </div>
+            <img class="down-btn" src="./src/down.png" alt="next" loading="eager">
         </div>
     </div>
     
