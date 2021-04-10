@@ -79,27 +79,28 @@ div.intro .textbox{
   left: 29%;
   right: 0;
   background-color: #faf9d7cc;
+  font-size: 1.042vw;
 }
 
 div.intro .contentblock{
-  padding: 60px 16% 0 16%;
+  padding: 5.563% 16% 0 16%;
   line-height: 170%;
   font-family: 华文楷体;
-  font-size: 1.63vw;
+  font-size: 1.5625em;
   height: 30%;
   justify-content: space-between;
 }
 
 div.intro h1{
-  padding-top: 70px;
-  font-size: 45px;
-  letter-spacing: 8px;
+  padding-top: 6.5%;
+  font-size: 3em;
+  letter-spacing: 0.2em;
 }
 
 div.intro h2{
-  padding-top: 5px;
-  font-size: 25px;
-  transfrom: translate(-0.4%);
-  -webkit-transform: translate(-0.4%);
-  letter-spacing: 1px;
+  padding-top: 0.5%;
+  font-size: 1.5em;
+  transfrom: translate(-0.25em);
+  -webkit-transform: translate(-0.25em);
+  letter-spacing: 0.05em;
 }
