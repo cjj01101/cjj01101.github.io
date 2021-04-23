@@ -16,8 +16,8 @@
             $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
             $("#intro h1,h2").each(function(n){
                 $(this).css({
-                    "animation": "emerge 2s 1 " + (n-1)*0.2 + "s",
-                    "-webkit-animation": "emerge 2s 1 " + (n-1)*0.2 + "s"});
+                    "animation": "emerge 2s 1 " + n*0.5 + "s",
+                    "-webkit-animation": "emerge 2s 1 " + n*0.5 + "s"});
             });
         });
         $("#intro .down-btn").click(function(){
