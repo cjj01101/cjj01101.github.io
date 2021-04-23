@@ -14,13 +14,8 @@
         $("#welcome .down-btn").click(function(){
             $("#intro").show();
             $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
-            /*$("#intro").each(function(){
+            $("#intro h1,h2").each(function(){
                 $(this).css({"animation": "emerge 2s 1", "-webkit-animation": "emerge 2s 1"});
-            });*/
-            $("#intro").animate({
-                animationName: "emerge",
-                animationDuration: "2s",
-                animationIterationCount: "1"
             });
         });
         $("#intro .down-btn").click(function(){
