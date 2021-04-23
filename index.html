@@ -22,12 +22,11 @@
         $("#welcome .down-btn").click(function(){
             $("#intro").show();
             $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
-            $("#intro h1,h2").each(function(n,elem) {emerge(n, elem, n*0.5);});
-            $("#intro .contentblock").each(function(n){
-                $(this).css({
-                    "visibility": "visible",
-                    "animation": "emerge 2s 1 " + (2+n*2) + "s",
-                    "-webkit-animation": "emerge 2s 1 " + (2+n*2) + "s backwards"});
+            $("#intro h1,h2").each(function(n,elem) {
+                emerge(n, elem, n*0.5);
+            });
+            $("#intro .contentblock").each(function(n, elem){
+                emerge(n, elem, 2+n*4);
             });
         });
         $("#intro .down-btn").click(function(){
