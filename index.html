@@ -7,11 +7,11 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script>
-    function emerge(n, elem, time){
+    function emerge(n, elem){
         elem.css({
             "visibility": "visible",
-            "animation": "emerge 2s 1 " + time + "s backwards",
-             "-webkit-animation": "emerge 2s 1 " + time + "s backwards"});
+            "animation": "emerge 2s 1 " + n*0.5 + "s backwards",
+             "-webkit-animation": "emerge 2s 1 " + n*0.5 + "s backwards"});
         });
     }
         
@@ -22,7 +22,7 @@
         $("#welcome .down-btn").click(function(){
             $("#intro").show();
             $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
-            $("#intro h1,h2").each(emerge(n, elem, n*0.5));
+            $("#intro h1,h2").each(emerge(n, elem));
             $("#intro .contentblock").each(function(n){
                 $(this).css({
                     "visibility": "visible",
