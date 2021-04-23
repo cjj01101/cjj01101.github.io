@@ -89,7 +89,7 @@ body>div{position:relative;}
   height: 800px;
 }
 
-#intro .textbox>*{
+#intro .textbox>*, down-btn{
   visibility: hidden
 }
 
