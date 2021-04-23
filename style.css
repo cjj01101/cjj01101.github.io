@@ -1,8 +1,11 @@
 *{
   margin: 0px;
+  padding: 0px;
 }
 
 h1, h2{text-align: center;}
+
+body>div{position:relative;}
 
 .centerflex{
   display: flex;
@@ -10,8 +13,13 @@ h1, h2{text-align: center;}
   align-items: center;
 }
 
+.imgbox{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 div#welcome{
-  position: relative;
   height: 1000px;
   background-image: url(./src/bgpic.png);
   background-repeat: no-repeat;
@@ -63,14 +71,7 @@ div#welcome h1{
 div#intro{
   display: none;
   position: relative;
-  padding: 0 0 0 0;
   height: 800px;
-}
-
-.imgbox{
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
 }
 
 div#intro .textbox{
@@ -105,5 +106,7 @@ div#intro h2{
   letter-spacing: 0.05em;
 }
 
-div.main{
+div#main{
+  display: none;
+  he
 }
