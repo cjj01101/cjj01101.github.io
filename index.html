@@ -11,9 +11,13 @@
         $(".fixed-btn").click(function(){
             $("html,body").animate({scrollTop: 0}, 300);
         });
-        $(".main .down-btn").click(function(){
-            $(".intro").show();
-            $("html,body").animate({scrollTop: $(".intro").offset().top}, 500);
+        $("#welcome .down-btn").click(function(){
+            $("#intro").show();
+            $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
+        });
+        $("#intro .down-btn").click(function(){
+            $("#main").show();
+            $("html,body").animate({scrollTop: $("#main").offset().top}, 500);
         });
     });
     </script>
