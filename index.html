@@ -7,14 +7,6 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script>
-        function emerge(elem, time){
-            $(elem).css({
-                "animation": "emerge 2s 1 " + time + "s forwards",
-                "-webkit-animation": "emerge 2s 1 " + time + "s forwards"
-            });
-        }
-        
-        
         function async_execute(delay, func){
             return new Promise(function(resolve, reject){
                 setTimeout(() => {
@@ -24,16 +16,24 @@
             });
         }
         
+        function emerge(elem, time){
+            $(elem).css({
+                "animation": "emerge 2s 1 " + time + "s forwards",
+                "-webkit-animation": "emerge 2s 1 " + time + "s forwards"
+            });
+        }
 
         $(document).ready(function(){
             $(".fixed-btn").click(function(){
                 $("html,body").animate({scrollTop: 0}, 300);
             });
-            $("#welcome .down-btn").click(function(){
+            $("#welcome .down-btn").click(async function(){
                 $("#intro").show();
                 $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
-                $("#intro h1,h2").each((n,elem) => emerge(elem, 0.5+n*0.5));
-                $("#intro .contentblock").each((n, elem) => emerge(elem, 3+n*4));
+                /*$("#intro h1,h2").each((n,elem) => emerge(elem, 0.5+n*0.5));
+                $("#intro .contentblock").each((n, elem) => emerge(elem, 3+n*4));*/
+                await async_execute(500, () => $("#intro h1,h2").each((n,elem) => emerge(elem, n*0.5)));
+                await async_execute(2000, () => $("#intro .contentblock").each((n, elem) => emerge(elem, 3+n*4)));
                 setTimeout(function() {
                     $("#intro .down-btn").css("visibility","visible");
                 }, 11000);
