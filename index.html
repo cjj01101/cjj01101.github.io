@@ -15,7 +15,8 @@
             $("#intro").show();
             $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
             $("#intro").each(function(){
-                css("animation", "emerge 2s 1");
+                $(this).css("animation", "emerge 2s 1");
+                $(this).css("-webkit-animation", "emerge 2s 1");
             });
         });
         $("#intro .down-btn").click(function(){
