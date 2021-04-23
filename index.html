@@ -17,7 +17,11 @@
             /*$("#intro").each(function(){
                 $(this).css({"animation": "emerge 2s 1", "-webkit-animation": "emerge 2s 1"});
             });*/
-            $("#intro").animate({animation: 'emerge 2s 1'});
+            $("#intro").animate({
+                animationName: "emerge",
+                animationDuration: "2s",
+                animationIterationCount: 1
+            });
         });
         $("#intro .down-btn").click(function(){
             $("#main").show();
