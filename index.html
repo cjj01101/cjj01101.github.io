@@ -17,14 +17,14 @@
             $("#intro h1,h2").each(function(n){
                 $(this).css({
                     "visibility": "visible",
-                    "animation": "emerge 2s 1 " + n*0.5 + "s",
-                    "-webkit-animation": "emerge 2s 1 " + n*0.5 + "s"});
+                    "animation": "emerge 2s 1 " + n*0.5 + "s backwards",
+                    "-webkit-animation": "emerge 2s 1 " + n*0.5 + "s backwards"});
             });
             $("#intro .contentblock").each(function(n){
                 $(this).css({
                     "visibility": "visible",
                     "animation": "emerge 2s 1 " + (2+n*2) + "s",
-                    "-webkit-animation": "emerge 2s 1 " + (2+n*2) + "s"});
+                    "-webkit-animation": "emerge 2s 1 " + (2+n*2) + "s backwards"});
             });
         });
         $("#intro .down-btn").click(function(){
