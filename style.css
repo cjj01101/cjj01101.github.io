@@ -130,12 +130,17 @@ body>div{position:relative;}
 }
 
 #main #firstbg{
+  position: absolute;
   height: 20%;
+  width: 100%;
   background-image: linear-gradient(to bottom, #faf9d7cc, #ffffffff);
 }
 
 #main #secondbg{
+  position: absolute;
   height: 80%;
+  width: 100%;
+  top: 20%;
   background-image: linear-gradient(to bottom, #ffffffff, #00000000), url("./src/bottompic.jpg");
   background-size: cover;
   background-position: bottom;
