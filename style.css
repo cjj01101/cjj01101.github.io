@@ -127,7 +127,16 @@ body>div{position:relative;}
 #main{
   display: none;
   height: 1500px;
-  background: no-repeat bottom;
-  background-size: 100% auto;
-  background-image: linear-gradient(to bottom, #faf9d7cc, #ffffffff 20%, #00000000), url("./src/bottompic.jpg");
+}
+
+#main #firstbg{
+  height: 20%;
+  background-image: linear-gradient(to bottom, #faf9d7cc, #ffffffff);
+}
+
+#main #secondbg{
+  height: 80%;
+  background-image: linear-gradient(to bottom, #ffffffff, #00000000), url("./src/bottompic.jpg");
+  background-size: cover;
+  background-position: bottom;
 }
