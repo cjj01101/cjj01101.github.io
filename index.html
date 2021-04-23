@@ -7,35 +7,43 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script>
-    function emerge(elem, time){
-        $(elem).css({
-            "animation": "emerge 2s 1 " + time + "s forwards",
-             "-webkit-animation": "emerge 2s 1 " + time + "s forwards"
-        });
-    }
+        function emerge(elem, time){
+            $(elem).css({
+                "animation": "emerge 2s 1 " + time + "s forwards",
+                "-webkit-animation": "emerge 2s 1 " + time + "s forwards"
+            });
+        }
         
-    $(document).ready(function(){
-        $(".fixed-btn").click(function(){
-            $("html,body").animate({scrollTop: 0}, 300);
-        });
-        $("#welcome .down-btn").click(function(){
-            $("#intro").show();
-            $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
-            $("#intro h1,h2").each(function(n,elem) {
-                emerge(elem, 0.5+n*0.5);
+        /*
+        function async_execute(delay){
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+
+                }, delay);
             });
-            $("#intro .contentblock").each(function(n, elem){
-                emerge(elem, 3+n*4);
+        }
+        */
+
+        $(document).ready(function(){
+            $(".fixed-btn").click(function(){
+                $("html,body").animate({scrollTop: 0}, 300);
             });
-            setTimeout(function() {
-                $("#intro .down-btn").css("visibility","visible");
-            }, 10000);
+            $("#welcome .down-btn").click(function(){
+                $("#intro").show();
+                $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
+                $("#intro h1,h2").each((n,elem) => emerge(elem, 0.5+n*0.5));
+                $("#intro .contentblock").each(function(n, elem){
+                    emerge(elem, 3+n*4);
+                });
+                setTimeout(function() {
+                    $("#intro .down-btn").css("visibility","visible");
+                }, 11000);
+            });
+            $("#intro .down-btn").click(function(){
+                $("#main").show();
+                $("html,body").animate({scrollTop: $("#main").offset().top}, 500);
+            });
         });
-        $("#intro .down-btn").click(function(){
-            $("#main").show();
-            $("html,body").animate({scrollTop: $("#main").offset().top}, 500);
-        });
-    });
     </script>
 </head>
 
