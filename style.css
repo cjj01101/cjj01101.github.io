@@ -70,7 +70,6 @@ div#welcome h1{
 
 div#intro{
   display: none;
-  position: relative;
   height: 800px;
 }
 
@@ -108,5 +107,5 @@ div#intro h2{
 
 div#main{
   display: none;
-  he
+  height: 800px;
 }
