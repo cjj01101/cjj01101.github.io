@@ -71,7 +71,7 @@ body>div{position:relative;}
     }
 }
 
-div#welcome{
+#welcome{
   height: 1000px;
   background-image: url(./src/bgpic.png);
   background-repeat: no-repeat;
@@ -79,21 +79,21 @@ div#welcome{
   background-position: center;
 }
 
-div#welcome h1{
+#welcome h1{
   padding-top: 250px;
   font-size: 40px;
 }
 
-div#intro{
+#intro{
   display: none;
   height: 800px;
 }
 
-div#intro .textbox>*{
+#intro .textbox>*{
   visibility: hidden
 }
 
-div#intro .textbox{
+#intro .textbox{
   position: absolute;
   height: 100%;
   left: 29%;
@@ -102,7 +102,7 @@ div#intro .textbox{
   font-size: 1.042vw;
 }
 
-div#intro .contentblock{
+#intro .contentblock{
   padding: 5% 16% 0 16%;
   height: 30%;
   font-family: 华文楷体;
@@ -111,13 +111,13 @@ div#intro .contentblock{
   justify-content: space-between;
 }
 
-div#intro h1{
+#intro h1{
   padding-top: 5%;
   font-size: 3em;
   letter-spacing: 0.2em;
 }
 
-div#intro h2{
+#intro h2{
   padding-top: 0.5%;
   font-size: 1.5em;
   letter-spacing: 0.05em;
@@ -125,7 +125,7 @@ div#intro h2{
   -webkit-transform: translate(-0.25em);
 }
 
-div#main{
+#main{
   display: none;
   height: 800px;
 }
