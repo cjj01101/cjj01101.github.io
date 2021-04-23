@@ -89,7 +89,7 @@ div#intro{
   height: 800px;
 }
 
-div#intro .textbox *{
+div#intro .textbox>*{
   visibility: hidden
 }
 
