@@ -129,5 +129,5 @@ body>div{position:relative;}
   height: 1500px;
   background: no-repeat bottom;
   background-size: 100% auto;
-  background-image: linear-gradient(to bottom, #faf9d7cc, #ffffffff 300px, #00000000), url("./src/bottompic.jpg");
+  background-image: linear-gradient(to bottom, #faf9d7cc, #ffffffff 20%, #00000000), url("./src/bottompic.jpg");
 }
