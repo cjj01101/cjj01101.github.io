@@ -28,7 +28,7 @@
             $("#intro .contentblock").each(function(n, elem){
                 emerge(n, elem, 3+n*4);
             });
-            $("#intro .down-btn").delay(10000).animate({visibility: "visible"});
+            $("#intro .down-btn").animate({visibility: "visible"}, 5000);
         });
         $("#intro .down-btn").click(function(){
             $("#main").show();
