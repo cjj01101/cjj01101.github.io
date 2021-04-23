@@ -55,11 +55,6 @@ body>div{position:relative;}
     }
 }
 
-.emerge{
-  animation: emerge 2s 1;
-  -webkit-animation: emerge 2s 1;
-}
-
 @keyframes emerge {
     from {
         transform: translatey(-15px);
@@ -90,7 +85,7 @@ body>div{position:relative;}
 }
 
 #intro .textbox>*, #intro .down-btn{
-  visibility: hidden
+  opacity: 0;
 }
 
 #intro .textbox{
