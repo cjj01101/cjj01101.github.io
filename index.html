@@ -14,7 +14,9 @@
         $("#welcome .down-btn").click(function(){
             $("#intro").show();
             $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
-            $("#intro").css("animation", "emerge 2s 1");
+            $("#intro").each(function(){
+                css("animation", "emerge 2s 1");
+            });
         });
         $("#intro .down-btn").click(function(){
             $("#main").show();
