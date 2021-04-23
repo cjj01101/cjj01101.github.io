@@ -15,10 +15,11 @@
         }
         
         /*
-        function async_execute(delay){
+        function async_execute(delay, func){
             return new Promise(function(resolve, reject){
-                setTimeout(function(){
-
+                setTimeout(() => {
+                    func();
+                    resolve();
                 }, delay);
             });
         }
@@ -32,9 +33,7 @@
                 $("#intro").show();
                 $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
                 $("#intro h1,h2").each((n,elem) => emerge(elem, 0.5+n*0.5));
-                $("#intro .contentblock").each(function(n, elem){
-                    emerge(elem, 3+n*4);
-                });
+                $("#intro .contentblock").each((n, elem) => emerge(elem, 3+n*4));
                 setTimeout(function() {
                     $("#intro .down-btn").css("visibility","visible");
                 }, 11000);
