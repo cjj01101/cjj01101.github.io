@@ -10,7 +10,7 @@ h1, h2{text-align: center;}
   align-items: center;
 }
 
-div.main{
+div#welcome{
   position: relative;
   height: 1000px;
   background-image: url(./src/bgpic.png);
@@ -19,7 +19,7 @@ div.main{
   background-position: center;
 }
 
-div.main h1{
+div#welcome h1{
   padding-top: 250px;
   font-size: 40px;
 }
@@ -60,7 +60,7 @@ div.main h1{
     }
 }
 
-div.intro{
+div#intro{
   display: none;
   position: relative;
   padding: 0 0 0 0;
@@ -73,7 +73,7 @@ div.intro{
   overflow: hidden;
 }
 
-div.intro .textbox{
+div#intro .textbox{
   position: absolute;
   height: 100%;
   left: 29%;
@@ -82,7 +82,7 @@ div.intro .textbox{
   font-size: 1.042vw;
 }
 
-div.intro .contentblock{
+div#intro .contentblock{
   padding: 5% 16% 0 16%;
   height: 30%;
   font-family: 华文楷体;
@@ -91,16 +91,19 @@ div.intro .contentblock{
   justify-content: space-between;
 }
 
-div.intro h1{
+div#intro h1{
   padding-top: 5%;
   font-size: 3em;
   letter-spacing: 0.2em;
 }
 
-div.intro h2{
+div#intro h2{
   padding-top: 0.5%;
   font-size: 1.5em;
   transfrom: translate(-0.25em);
   -webkit-transform: translate(-0.25em);
   letter-spacing: 0.05em;
+}
+
+div.main{
 }
