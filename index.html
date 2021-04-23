@@ -20,6 +20,12 @@
                     "animation": "emerge 2s 1 " + n*0.5 + "s",
                     "-webkit-animation": "emerge 2s 1 " + n*0.5 + "s"});
             });
+            $("#intro .contentblock").each(function(n){
+                $(this).css({
+                    "visibility": "visible",
+                    "animation": "emerge 2s 1 " + 2+n*2 + "s",
+                    "-webkit-animation": "emerge 2s 1 " + 2+n*2 + "s"});
+            });
         });
         $("#intro .down-btn").click(function(){
             $("#main").show();
