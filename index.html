@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script>
-    function emerge(n, elem, time){
+    function emerge(elem, time){
         $(elem).css({
             "animation": "emerge 2s 1 " + time + "s forwards",
              "-webkit-animation": "emerge 2s 1 " + time + "s forwards"
@@ -22,12 +22,12 @@
             $("#intro").show();
             $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
             $("#intro h1,h2").each(function(n,elem) {
-                emerge(n, elem, 0.5+n*0.5);
+                emerge(elem, 0.5+n*0.5);
             });
             $("#intro .contentblock").each(function(n, elem){
-                emerge(n, elem, 3+n*4);
+                emerge(elem, 3+n*4);
             });
-            setTimeout($("#intro .down-btn").css, 10000, "visibility", "visible");
+            emerge($("#intro .down-btn").css("visibility","visible"), 12);
         });
         $("#intro .down-btn").click(function(){
             $("#main").show();
