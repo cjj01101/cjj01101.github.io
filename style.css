@@ -126,6 +126,8 @@ body>div{position:relative;}
 
 #main{
   display: none;
-  height: 1200px;
-  background-image: linear-gradient(to bottom, #faf9d7cc, #ffffffff 40%, #ffffffff 60%, #c2e6f4ff);
+  height: 1500px;
+  background: no-repeat bottom;
+  background-size: 100% auto;
+  background-image: linear-gradient(to bottom, #faf9d7cc, #ffffffff 300px, #00000000), url("./src/bottompic.jpg");
 }
