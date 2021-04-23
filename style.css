@@ -136,16 +136,16 @@ body>div{position:relative;}
 
 #main .bgblock:nth-of-type(1){
   position: absolute;
-  height: 20%;
+  height: 30%;
   width: 100%;
   background-image: linear-gradient(to bottom, #faf9d7cc, #ffffffff);
 }
 
 #main .bgblock:nth-of-type(2){
   position: absolute;
-  height: 80%;
+  height: 70%;
   width: 100%;
-  top: 20%;
+  top: 30%;
   background-image: linear-gradient(to bottom, #ffffffff, #00000000), url("./src/bottompic.jpg");
   background-size: cover;
   background-position: bottom;
