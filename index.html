@@ -23,10 +23,10 @@
             $("#intro").show();
             $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
             $("#intro h1,h2").each(function(n,elem) {
-                emerge(n, elem, n*0.5);
+                emerge(n, elem, 0.5+n*0.5);
             });
             $("#intro .contentblock").each(function(n, elem){
-                emerge(n, elem, 2+n*4);
+                emerge(n, elem, 2.5+n*4);
             });
         });
         $("#intro .down-btn").click(function(){
