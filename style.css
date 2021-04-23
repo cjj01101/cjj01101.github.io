@@ -19,19 +19,6 @@ body>div{position:relative;}
   overflow: hidden;
 }
 
-div#welcome{
-  height: 1000px;
-  background-image: url(./src/bgpic.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-div#welcome h1{
-  padding-top: 250px;
-  font-size: 40px;
-}
-
 .fixed-btn{
   position: fixed;
   right: 3%;
@@ -66,6 +53,35 @@ div#welcome h1{
         transform: translatey(10px);
         opacity: 1;
     }
+}
+
+.emerge{
+  animation: emerge 2s 1;
+  -webkit-animation: emerge 2s 1;
+}
+
+@keyframes emerge {
+    from {
+        transform: translatey(-15px);
+        opacity: 0;
+    }
+    to {
+        transform: translatey(0px);
+        opacity: 1;
+    }
+}
+
+div#welcome{
+  height: 1000px;
+  background-image: url(./src/bgpic.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+div#welcome h1{
+  padding-top: 250px;
+  font-size: 40px;
 }
 
 div#intro{
