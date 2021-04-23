@@ -84,8 +84,12 @@ body>div{position:relative;}
   height: 800px;
 }
 
-#intro .textbox>*, #intro .down-btn{
+#intro .textbox>*{
   opacity: 0;
+}
+
+#intro .down-btn{
+  visibility: hidden;
 }
 
 #intro .textbox{
