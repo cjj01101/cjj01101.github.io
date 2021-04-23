@@ -13,6 +13,10 @@
         });
         $("#welcome .down-btn").click(function(){
             $("#intro").show();
+            $("#intro").each(function(){
+                css("animation", "emerge 2s 1");
+                css("-webkit-animation", "emerge 2s 1");
+            });
             $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
         });
         $("#intro .down-btn").click(function(){
