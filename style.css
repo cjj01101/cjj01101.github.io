@@ -150,3 +150,17 @@ body>div{position:relative;}
   background-size: cover;
   background-position: bottom;
 }
+
+#main h1{
+  padding-top: 5%;
+  font-size: 48px;
+  letter-spacing: 20px;
+  transform: translate(6px);
+  -webkit-transform: translate(6px);
+}
+
+#main h2{
+  padding-top: 0.5%;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
