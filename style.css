@@ -89,6 +89,10 @@ div#intro{
   height: 800px;
 }
 
+div#intro .textbox *{
+  visibility: hidden
+}
+
 div#intro .textbox{
   position: absolute;
   height: 100%;
