@@ -55,6 +55,7 @@ body>div{position:relative;}
 
 .card .content::after{
   font-family: 宋体;
+  line-height: 175%;
   white-space: pre;
   opacity: 0;
   transition: 0.5s;
@@ -222,9 +223,9 @@ body>div{position:relative;}
 }
 
 #main .card:nth-of-type(1) .content::after{
-  content: "\A\A这里是一份备忘录,\A记录下我所学的、想学的,\A关于想学内容的时间安排,\A以及它们的完成情况.";
+  content: "\A这里是一份备忘录,\A记录下我所学的、想学的,\A关于想学内容的时间安排,\A以及它们的完成情况.";
 }
 
 #main .card:nth-of-type(2) .content::after{
-  content: "\A\A'Talk is cheap;\Ashow me the code.'\A查看我所参与的创作成果,\A一切由代码说了算.";
+  content: "\A'Talk is cheap;\Ashow me the code.'\A查看我所参与的创作成果,\A一切由代码说了算.";
 }
