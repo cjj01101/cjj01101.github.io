@@ -49,6 +49,7 @@ body>div{position:relative;}
   height: 20px;
   padding: 20px 0 20px;
   text-align: center;
+  font-family: 宋体;
   overflow: hidden;
   transition: 0.5s ease-out;
 }
@@ -225,5 +226,5 @@ body>div{position:relative;}
 }
 
 #main .card:nth-of-type(2) .content::after{
-  content: "\A\A'Talk is cheap,\Ashow me the code.'\A查看我所参与的创作成果,\A一切都由代码说了算.";
+  content: "\A\A'Talk is cheap;\Ashow me the code.'\A查看我所参与的创作成果,\A一切由代码说了算.";
 }
