@@ -125,8 +125,7 @@ body>div{position:relative;}
   padding-top: 0.5%;
   font-size: 1.5em;
   letter-spacing: 0.05em;
-  transfrom: translate(-0.25em);
-  -webkit-transform: translate(-0.25em);
+  translate: -0.25em 0;
 }
 
 #main{
@@ -161,6 +160,5 @@ body>div{position:relative;}
   padding-top: 0.5%;
   font-size: 30px;
   letter-spacing: 2px;
-  transform: translate(-6px);
-  -webkit-transform: translate(-6px);
+  translate: -6px 0;
 }
