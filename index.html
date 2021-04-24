@@ -21,7 +21,7 @@
                 "animation": "emerge 2s 1 " + time + "s",
                 "-webkit-animation": "emerge 2s 1 " + time + "s"
             });
-            $(elem).addEventListener("animationend", () => $(elem).css("opacity", 1));
+            elem.addEventListener("animationend", () => $(elem).css("opacity", 1));
         }
 
         $(document).ready(function(){
