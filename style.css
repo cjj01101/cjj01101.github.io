@@ -104,7 +104,7 @@ body>div{position:relative;}
 @keyframes move_down {
     from {
         transform: translatey(-10px);
-        opacity: 0.5;
+        opacity: 0.2;
     }
     to {
         transform: translatey(10px);
