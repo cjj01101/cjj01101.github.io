@@ -198,7 +198,7 @@ body>div{position:relative;}
   height: 70%;
   width: 100%;
   top: 30%;
-  background-image: linear-gradient(to bottom, #ffffffff, #00000000), url("./src/bottompic.jpg");
+  background-image: linear-gradient(to bottom, #ffffffff, #00000000 40%), url("./src/bottompic.jpg");
   background-size: cover;
   background-position: bottom;
 }
