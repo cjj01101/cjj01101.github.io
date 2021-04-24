@@ -186,3 +186,8 @@ body>div{position:relative;}
   letter-spacing: 2px;
   translate: -6px 0;
 }
+
+#main .cards{
+  padding: 5% 15%;
+  justify-content: space-around;
+}
