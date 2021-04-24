@@ -205,6 +205,7 @@ body>div{position:relative;}
   width: 100%;
   top: 30%;
   background-image: linear-gradient(to bottom, #ffffffff, #00000000 40%), url("./src/bottompic.jpg");
+  background-blend-mode: screen;
   background-size: cover;
   background-position: bottom;
 }
