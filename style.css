@@ -53,7 +53,7 @@ body>div{position:relative;}
 }
 
 .card .content:after{
-  content: "abc";
+  white-space: pre;
   opacity: 0;
   transition: 0.5s;
 }
