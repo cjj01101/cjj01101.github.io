@@ -25,23 +25,10 @@ body>div{position:relative;}
 }
 
 .card {
-  width: 250px;
+  width: 240px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: 0.2s;
   cursor: pointer;
-}
-
-.card:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-}
-
-.card:hover .header{
-  height: 80px;
-  font-size: 24px;
-}
-
-.card:hover .content{
-  padding: 100px 0;
 }
 
 .card .header {
@@ -55,10 +42,34 @@ body>div{position:relative;}
 .card .content {
   width: 100%;
   height: 20px;
-  padding: 20px 0;
+  padding: 20px 0 20px;
   text-align: center;
   transition: 0.5s ease-out;
 }
+
+.card .content:after{
+  content: "abc";
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card:hover .header{
+  height: 80px;
+  font-size: 24px;
+}
+
+.card:hover .content{
+  padding: 20px 0 180px;
+}
+
+.card:hover .content:after{
+  opacity: 1;
+}
+
 .fixed-btn{
   position: fixed;
   right: 3%;
