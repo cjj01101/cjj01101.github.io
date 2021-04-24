@@ -30,7 +30,8 @@
             $("#welcome .down-btn").click(async function(){
                 $("#intro").show();
                 $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
-                await async_execute(500, () => $("#intro h1, #intro h2").each((n,elem) => emerge(elem, n*0.5)));
+                //await async_execute(500, () => $("#intro h1, #intro h2").each((n,elem) => emerge(elem, n*0.5)));
+                $("#intro h1, #intro h2").each((n,elem) => await async_execute(500, () => emerge(elem, n*0.5)));
                 await async_execute(2500, () => $("#intro .contentblock").each((n, elem) => emerge(elem, n*4)));
                 await async_execute(8000, () => $("#intro .down-btn").css("visibility","visible"));
             });
