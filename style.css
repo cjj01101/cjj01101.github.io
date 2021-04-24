@@ -49,12 +49,12 @@ body>div{position:relative;}
   height: 20px;
   padding: 20px 0 20px;
   text-align: center;
-  font-family: 宋体;
   overflow: hidden;
   transition: 0.5s ease-out;
 }
 
 .card .content::after{
+  font-family: 宋体;
   white-space: pre;
   opacity: 0;
   transition: 0.5s;
