@@ -92,6 +92,10 @@ body>div{position:relative;}
   cursor: pointer;
 }
 
+.fixed-btn p{
+  padding-top: 6px;
+}
+
 .down-btn{
   position: absolute;
   width: 40px;
