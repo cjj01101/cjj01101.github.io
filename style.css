@@ -169,6 +169,11 @@ body>div{position:relative;}
   visibility: hidden;
 }
 
+#intro .imgbox{
+  float: left;
+  width: 29%;
+}
+
 #intro .textbox{
   position: absolute;
   height: 100%;
