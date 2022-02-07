@@ -80,13 +80,25 @@ body>div{position:relative;}
 
 .navi{
   position: fixed;
-  display: flex;
-  top: 50%;
-  left: 50%;
+  display:flex;
+  top: 20%;
+  right: 0;
+  font-size: 1.25em;
+}
+
+.navi:before{
+  content: "";
+  border: 1.5em solid #000;
+  border-left-color: transparent;
+}
+
+.navi p{
+  position: relative;
+  display: inline-block;
+  padding: 0 1em;
   background-color: black;
   color: white;
   line-height: 3em;
-  font-size: 1.25em;
 }
 
 .navi:before{
