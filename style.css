@@ -78,12 +78,26 @@ body>div{position:relative;}
   opacity: 1;
 }
 
-.navi{
+.navi-wrapper{
   position: fixed;
-  display:flex;
-  top: 20%;
+  top: 80px;
   right: 0;
+  overflow: hidden;
+}
+
+.navi{
+  display: flex;
+  position: relative;
+  left: 100%;
+  transform: translateX(-3em);
   font-size: 1.25em;
+  transition: 0.5s ease-out;
+}
+
+.navi:hover{
+  left: 0;
+  right: 0;
+  transform: translateX(0em);
 }
 
 .navi:before{
