@@ -92,22 +92,17 @@ body>div{position:relative;}
   border-left-color: transparent;
 }
 
+.navi:after{
+  content: "";
+  border: 1em solid #000;
+}
+
 .navi p{
   position: relative;
-  display: inline-block;
-  padding: 0 1em;
+  padding: 0 2em;
   background-color: black;
   color: white;
   line-height: 3em;
-}
-
-.navi:before{
-  content: "";
-  border: 1em solid #fff;
-}
-
-.navi p{
-  padding: 0 1em;
 }
 
 .fixed-btn{
