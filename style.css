@@ -117,6 +117,34 @@ body>div{position:relative;}
   background-color: black;
   color: white;
   line-height: 3em;
+  transition: 0.25s ease-out;
+}
+
+.navi:before, .navi:after, .navi p{
+  margin-top: 0.5em;
+}
+
+.navi p:hover{
+  margin-top: 0em;
+  background-color: #ffd020;
+}
+
+.navi p:before, .navi p:after{
+  content: "";
+  position: absolute;
+  top: 3em;
+}
+
+.navi p:before{
+  left: 0;
+  border-right: 0.5em solid #bbb000;
+  border-bottom: 0.5em solid #000;
+}
+
+.navi p:after{
+  right: 0;
+  border-left: 0.5em solid #bbb000;
+  border-bottom: 0.5em solid #000;
 }
 
 .fixed-btn{
