@@ -78,6 +78,17 @@ body>div{position:relative;}
   opacity: 1;
 }
 
+.navi{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: black;
+  color: white;
+  line-height: 3em;
+  padding: 0 1em;
+  font-size: 1.25em;
+}
+
 .fixed-btn{
   position: fixed;
   right: 3%;
