@@ -80,13 +80,22 @@ body>div{position:relative;}
 
 .navi{
   position: fixed;
+  display: flex;
   top: 50%;
   left: 50%;
   background-color: black;
   color: white;
   line-height: 3em;
-  padding: 0 1em;
   font-size: 1.25em;
+}
+
+.navi:before{
+  content: "";
+  border: 1em solid #fff;
+}
+
+.navi p{
+  padding: 0 1em;
 }
 
 .fixed-btn{
