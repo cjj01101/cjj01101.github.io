@@ -28,6 +28,7 @@
                 $("html,body").animate({scrollTop: 0}, 300);
             });
             $("#welcome .down-btn").click(async function(){
+                history.pushState({time:1},null,"aa");
                 $("#intro").show();
                 $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
                 await async_execute(500, () => $("#intro h1, #intro h2").each((n,elem) => emerge(elem, n*0.5)));
