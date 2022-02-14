@@ -48,9 +48,9 @@
                 $("html,body").animate({scrollTop: $("#main").offset().top}, 500);
             });
             
-            if(history.state && history.state.pageNum) {
+            if(history.state) {
                 var pages = ["#intro", "#main"];
-                var pageNum = history.state.pageNum;
+                var pageNum = history.state.pageNum || 0;
                 for(var i = 0; i < pageNum; i++) {
                     $(pages[i]).show();
                     if(i === 0) {
@@ -58,7 +58,7 @@
                         $(pages[i] + " .down-btn").css("visibility", "visible");
                     }
                 }
-                $("html,body").animate({scrollTop: history.state.scrollTop}, 500);
+                $("html,body").animate({scrollTop: history.state.scrollTop || 0}, 500);
             }
         });
     </script>
