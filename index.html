@@ -24,8 +24,9 @@
         }
         
         function updateState(pageNum){
+            alert(scrollY);
             if(history.state && history.state.pageNum >= pageNum) return;
-            history.replaceState({pageNum: pageNum}, null);
+            history.replaceState({pageNum: pageNum, scrollY: scrollY}, null);
         }
 
         $(document).ready(function(){
