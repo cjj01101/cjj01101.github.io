@@ -60,12 +60,12 @@
                 }
                 $("html,body").animate({scrollTop: history.state.scrollTop || 0}, 500);
             }
+            
+            window.onbeforeunload = function() {
+                alert("!");
+                updateState(history.state.pageNum || 0);
+            };
         });
-        
-        window.onbeforeunload = function() {
-            alert("!");
-            updateState(history.state.pageNum || 0);
-        };
     </script>
 </head>
 
