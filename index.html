@@ -24,7 +24,7 @@
         }
         
         function updateState(pageNum){
-            if(history.state && history.state.pageNum >= pageNum) return;
+            if(history.state && history.state.pageNum > pageNum) return;
             history.replaceState({pageNum: pageNum, scrollTop: scrollY}, null);
         }
 
@@ -63,7 +63,6 @@
         
         window.onbeforeunload = function() {
             updateState(history.state.pageNum || 0);
-            return "!!!";
         };
     </script>
 </head>
