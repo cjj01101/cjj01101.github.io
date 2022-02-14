@@ -22,13 +22,18 @@
                 "-webkit-animation": "emerge 2s 1 " + time + "s forwards"
             });
         }
+        
+        function updateState(pageNum){
+            if(history.state && history.state.pageNum >= pageNum) return;
+            history.replaceState({pageNum: pageNum}, null);
+        }
 
         $(document).ready(function(){
             $(".fixed-btn").click(function(){
                 $("html,body").animate({scrollTop: 0}, 300);
             });
             $("#welcome .down-btn").click(async function(){
-                if(!history.state) history.pushState({pageNum: 1}, null);
+                updateState(1);
                 
                 $("#intro").show();
                 $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
@@ -37,16 +42,15 @@
                 await async_execute(8000, () => $("#intro .down-btn").css("visibility", "visible"));
             });
             $("#intro .down-btn").click(function(){
-                if(history.state.pageNum === 1) history.pushState({pageNum: 2}, null);
+                updateState(2);
                 
                 $("#main").show();
                 $("html,body").animate({scrollTop: $("#main").offset().top}, 500);
             });
             
             if(history.state && history.state.pageNum) {
-                alert(history.state.pageNum);
                 var pages = ["#intro", "#main"];
-                var pageNum = history.state && history.state.pageNum;
+                var pageNum = history.state.pageNum;
                 for(var i = 0; i < pageNum; i++) {
                     $(pages[i]).show();
                     if(i === 0) {
