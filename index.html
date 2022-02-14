@@ -44,9 +44,9 @@
             });
             
             if(history.state && history.state.pageNum) {
-                alert(event.state.pageNum);
+                alert(history.state.pageNum);
                 var pages = ["#intro", "#main"];
-                var pageNum = event.state && event.state.pageNum;
+                var pageNum = history.state && history.state.pageNum;
                 for(var i = 0; i < pageNum; i++) { $(pages[i]).show(); }
                 $("html,body").animate({scrollTop: $(pages[pageNum-1]).offset().top}, 500);
             }
