@@ -24,9 +24,8 @@
         }
         
         function updateState(pageNum){
-            alert($(document).scrollTop());
             if(history.state && history.state.pageNum >= pageNum) return;
-            history.replaceState({pageNum: pageNum, scrollY: $(document).scrollTop()}, null);
+            history.replaceState({pageNum: pageNum, scrollTop: scrollY, null);
         }
 
         $(document).ready(function(){
@@ -59,7 +58,7 @@
                         $(pages[i] + " .down-btn").css("visibility", "visible");
                     }
                 }
-                $("html,body").animate({scrollTop: $(pages[pageNum-1]).offset().top}, 500);
+                $("html,body").animate({scrollTop: history.state.scrollTop}, 500);
             }
         });
     </script>
