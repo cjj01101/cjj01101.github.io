@@ -59,12 +59,12 @@
                 }
                 $("html,body").animate({scrollTop: history.state.scrollTop || 0}, 500);
             }
-            
-            window.onbeforeunload = function(e) {
-                window.event.returnValue = "!";
-                updateState(history.state.pageNum || 0);
-            };
         });
+        
+        window.onbeforeunload = function() {
+            updateState(history.state.pageNum || 0);
+            return "!!!";
+        };
     </script>
 </head>
 
