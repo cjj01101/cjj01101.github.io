@@ -44,6 +44,7 @@
             });
             
             if(history.state && history.state.pageNum) {
+                alert("!");
                 var pages = ["", "#intro", "#main"];
                 var pageNum = event.state && event.state.pageNum;
                 for(var i = 1; i < pageNum; i++) { $(pages[i]).show(); }
