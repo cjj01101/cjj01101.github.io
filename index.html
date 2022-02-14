@@ -44,17 +44,13 @@
             });
             
             if(history.state && history.state.pageNum) {
-                alert("!");
-                var pages = ["", "#intro", "#main"];
+                alert(event.state.pageNum);
+                var pages = ["#intro", "#main"];
                 var pageNum = event.state && event.state.pageNum;
-                for(var i = 1; i < pageNum; i++) { $(pages[i]).show(); }
-                $("html,body").animate({scrollTop: $(pages[pageNum]).offset().top}, 500);
+                for(var i = 0; i < pageNum; i++) { $(pages[i]).show(); }
+                $("html,body").animate({scrollTop: $(pages[pageNum-1]).offset().top}, 500);
             }
         });
-        
-        window.addEventListener("popstate", function(event){
-            alert(event.state.pageNum);
-        }, false);
     </script>
 </head>
 
