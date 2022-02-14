@@ -49,9 +49,9 @@
                 var pageNum = history.state && history.state.pageNum;
                 for(var i = 0; i < pageNum; i++) {
                     $(pages[i]).show();
-                    if(i === 1) {
-                        $(pages[i]).filter("h1, h2, .contentblock").css("opacity", "1");
-                        $(pages[i]).filter(".down-btn").css("visibility", "visible");
+                    if(i === 0) {
+                        $(pages[i] + " .textbox > *").filter("h1, h2, .contentblock").css("opacity", "1");
+                        $(pages[i] + " .down-btn").css("visibility", "visible");
                     }
                 }
                 $("html,body").animate({scrollTop: $(pages[pageNum-1]).offset().top}, 500);
