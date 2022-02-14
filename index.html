@@ -63,6 +63,7 @@
         });
         
         window.onbeforeunload = function() {
+            alert("!");
             updateState(history.state.pageNum || 0);
         };
     </script>
