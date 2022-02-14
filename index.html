@@ -61,7 +61,7 @@
                 $("html,body").animate({scrollTop: history.state.scrollTop || 0}, 500);
             }
             
-            window.onbeforeunload = function() {
+            window.onbeforeunload = function(e) {
                 alert("!");
                 updateState(history.state.pageNum || 0);
             };
