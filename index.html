@@ -28,7 +28,7 @@
                 $("html,body").animate({scrollTop: 0}, 300);
             });
             $("#welcome .down-btn").click(async function(){
-                history.replaceState({pageNum: 1}, null);
+                history.pushState({pageNum: 1}, null);
                 
                 $("#intro").show();
                 $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
@@ -37,7 +37,7 @@
                 await async_execute(8000, () => $("#intro .down-btn").css("visibility","visible"));
             });
             $("#intro .down-btn").click(function(){
-                history.replaceState({pageNum: 2}, null);
+                history.pushState({pageNum: 2}, null);
                 
                 $("#main").show();
                 $("html,body").animate({scrollTop: $("#main").offset().top}, 500);
@@ -45,6 +45,7 @@
         });
         
         window.addEventListener("popstate", function(event){
+            alert("event.state.pageNum");
             var pages = ["", "intro", "main"];
             var pageNum = event.state && event.state.pageNum;
             for(var i = 1; i < pageNum; i++) { $(pages[i]).show(); }
