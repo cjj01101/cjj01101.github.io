@@ -24,9 +24,9 @@
         }
         
         function updateState(pageNum){
-            alert(scrollY);
+            alert($(document).scrollTop());
             if(history.state && history.state.pageNum >= pageNum) return;
-            history.replaceState({pageNum: pageNum, scrollY: scrollY}, null);
+            history.replaceState({pageNum: pageNum, scrollY: $(document).scrollTop()}, null);
         }
 
         $(document).ready(function(){
