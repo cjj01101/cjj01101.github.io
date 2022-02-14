@@ -25,7 +25,7 @@
         
         function updateState(pageNum){
             if(history.state && history.state.pageNum >= pageNum) return;
-            history.replaceState({pageNum: pageNum, scrollTop: scrollY, null);
+            history.replaceState({pageNum: pageNum, scrollTop: scrollY}, null);
         }
 
         $(document).ready(function(){
