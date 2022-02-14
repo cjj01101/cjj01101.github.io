@@ -34,7 +34,7 @@
                 $("html,body").animate({scrollTop: $("#intro").offset().top}, 500);
                 await async_execute(500, () => $("#intro h1, #intro h2").each((n,elem) => emerge(elem, n*0.5)));
                 await async_execute(2500, () => $("#intro .contentblock").each((n, elem) => emerge(elem, n*4)));
-                await async_execute(8000, () => $("#intro .down-btn").css("visibility","visible"));
+                await async_execute(8000, () => $("#intro .down-btn").css("visibility", "visible"));
             });
             $("#intro .down-btn").click(function(){
                 if(history.state.pageNum === 1) history.pushState({pageNum: 2}, null);
@@ -47,7 +47,7 @@
                 alert(history.state.pageNum);
                 var pages = ["#intro", "#main"];
                 var pageNum = history.state && history.state.pageNum;
-                for(var i = 0; i < pageNum; i++) { $(pages[i]).show(); }
+                for(var i = 0; i < pageNum; i++) { $(pages[i]).show(); $(pages[i] + " *").css("opacity", "1"); }
                 $("html,body").animate({scrollTop: $(pages[pageNum-1]).offset().top}, 500);
             }
         });
