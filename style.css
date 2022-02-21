@@ -81,6 +81,7 @@ body>div{position:relative;}
 .message-board form{
   width: 480px;
   margin: 20px auto 0px;
+  text-align: center;
 }
 
 .message-board textarea{
@@ -90,20 +91,34 @@ body>div{position:relative;}
   margin-top: 20px;
 }
 
-.message-board input{
+.message-board input[type="text"]{
   width: 50%;
   height: 1.5em;
 }
 
-.message-board textarea, .message-board input{
+.message-board input[type="submit"]{
+  width: 20%;
+  height: 2em;
+  margin-top: 20px;
   background-color: #ffffff80;
-  border: solid 2px #eee;
+  border-color: #eeeeee;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.message-board textarea, .message-board input[type="text"]{
+  background-color: #ffffff80;
+  border: solid 2px #eeeeee;
   outline: none;
   border-radius: 4px;
 }
 
-.message-board textarea:focus, .message-board input:focus{
+.message-board textarea:focus, .message-board input[type="text"]:focus{
   border-color: #aaddff;
+}
+
+.message-board input[type="submit"]:hover{
+  background-color: #ffffffc0;
 }
 
 .navi-wrapper{
