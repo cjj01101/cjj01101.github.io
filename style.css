@@ -310,16 +310,16 @@ body>div{position:relative;}
   content: "\A'Talk is cheap;\Ashow me the code.'\A查看我所参与的创作成果,\A一切由代码说了算.";
 }
 
-#main .message-board{
-	height: 250px;
-	width: 400px;
-	resize: none;
-	background-color: #ffffff80;
-	border-style: solid;
+#main .message-board textarea[name="message"]{
+  height: 250px;
+  width: 400px;
+  resize: none;
+  background-color: #ffffff80;
+  border-style: solid;
   border-color: #eeeeee;
-	outline: none;
+  outline: none;
 }
 
-#main .message-board:focus{
+#main .message-board textarea[name="message"]:focus{
   border-color: #aaddff;
 }
