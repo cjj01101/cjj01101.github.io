@@ -111,6 +111,7 @@ body>div{position:relative;}
   width: 20%;
   height: 2em;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .message-board textarea:focus, .message-board input[type="text"]:focus{
