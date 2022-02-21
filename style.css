@@ -80,7 +80,7 @@ body>div{position:relative;}
 
 .message-board form{
   width: 480px;
-  margin: 0px auto;
+  margin: 20px auto 0px;
 }
 
 .message-board textarea{
