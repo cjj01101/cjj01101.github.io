@@ -309,3 +309,17 @@ body>div{position:relative;}
 #main .card:nth-of-type(2) .content::after{
   content: "\A'Talk is cheap;\Ashow me the code.'\A查看我所参与的创作成果,\A一切由代码说了算.";
 }
+
+#main .message-board{
+	height: 250px;
+	width: 400px;
+	resize: none;
+	background-color: #ffffff80;
+	border-style: solid;
+  border-color: #eeeeee;
+	outline: none;
+}
+
+#main .message-board:focus{
+  border-color: #aaddff;
+}
