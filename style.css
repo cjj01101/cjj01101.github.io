@@ -79,20 +79,24 @@ body>div{position:relative;}
 }
 
 .message-board form{
-  text-align: center;
+  width: 480px;
+  margin: 0px auto;
 }
 
-.message-board textarea[name="message"]{
-  height: 240px;
-  width: 480px;
-  resize: none;
-  outline: none;
+.message-board textarea, .message-board input{
   background-color: #ffffff80;
-  border: solid 2px #eeeeee;
+  border: solid 2px #eee;
+  outline: none;
   border-radius: 4px;
 }
 
-.message-board textarea[name="message"]:focus{
+.message-board textarea{
+  height: 240px;
+  width: 100%;
+  resize: none;
+}
+
+.message-board textarea:focus, .message-board input:focus{
   border-color: #aaddff;
 }
 
