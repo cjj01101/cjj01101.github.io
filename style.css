@@ -86,10 +86,10 @@ body>div{position:relative;}
   height: 250px;
   width: 400px;
   resize: none;
-  background-color: #ffffff80;
-  border-style: solid;
-  border-color: #eeeeee;
   outline: none;
+  background-color: #ffffff80;
+  border: solid 2px #eeeeee;
+  border-radius: 4px;
 }
 
 .message-board textarea[name="message"]:focus{
