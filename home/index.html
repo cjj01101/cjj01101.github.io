@@ -24,8 +24,12 @@
         }
         
         function updateState(pageNum){
-            if(history.state && history.state.pageNum > pageNum) return;
+            if(history.state && history.state.pageNum >= pageNum) return;
             history.replaceState({pageNum: pageNum, scrollTop: scrollY}, null);
+        }
+
+        function updateScroll(){
+            history.replaceState($.extend(history.state, {scrollTop: scrollY}), null);
         }
 
         $(document).ready(function(){
@@ -61,9 +65,7 @@
             }
         });
         
-        window.onbeforeunload = function() {
-            updateState(history.state.pageNum || 0);
-        };
+        window.onbeforeunload = updateScroll;
     </script>
 </head>
 
