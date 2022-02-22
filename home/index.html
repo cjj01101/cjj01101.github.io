@@ -66,13 +66,14 @@
 
             $("#main .message-board form").submit(function(event){
                 event.preventDefault();
+                var target = this;
                 $.ajax({
                     type: this.method,
                     url: this.action,
                     data: $(this).serialize(),
                     //dataType: "json",
                     success: function(data) {
-                        this.reset();
+                        target.reset();
                         alert("留言成功！");
                     },
                     error: function(){
