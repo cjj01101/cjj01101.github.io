@@ -63,6 +63,16 @@
                 }
                 $("html,body").animate({scrollTop: history.state.scrollTop || 0}, 500);
             }
+
+            $("#main .message-board form").submit(function(event){
+                event.preventDefault();
+                $.ajax({
+                    type: this.method,
+                    url: this.action,
+                    data: $(this).serialize(),
+                    dataType: "json",
+                });
+            });
         });
         
         window.onbeforeunload = updateScroll;
