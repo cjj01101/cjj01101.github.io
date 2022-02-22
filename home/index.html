@@ -71,6 +71,13 @@
                     url: this.action,
                     data: $(this).serialize(),
                     dataType: "json",
+                    success: function(data) {
+                        this.clear();
+                        alert("留言成功！");
+                    },
+                    error: function(){
+                        alert("提交失败。");
+                    },
                 });
             });
         });
@@ -144,14 +151,13 @@
         
         <div class="message-board">
             <h2>留言板</h2>
-            <form action="/scripts/leave_message.php" method="post" target="postiframe">
+            <form action="/scripts/leave_message.php" method="post">
                 <p style="text-align: left;">
                     你的名字：<input type="text" name="name" placeholder="20个字符以内" maxlength="20"><br>
                 </p>
                 <textarea name="message" placeholder="可以在这里说点什么哦（但不要超过300字）" maxlength="300"></textarea>
                 <input type="submit" value="提交">
             </form>
-            <iframe name="postiframe" style="display: none;" width="0" height="0" frameborder="0"></iframe>
         </div>
     </div>
     
