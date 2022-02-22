@@ -2,4 +2,5 @@
 <root>
 <message><name>tester</name><content>Hello!</content></message>
 <message><name>tester</name><content>Me again!</content></message>
-<message><name>guest</name><content>Where is here?</content></message></root>
+<message><name>guest</name><content>Where is here?</content></message>
+</root>
