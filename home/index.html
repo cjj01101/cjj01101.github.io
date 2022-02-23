@@ -46,10 +46,6 @@
             });
         }
 
-        function leaveMessage(){
-
-        }
-
         function fetchMessages(success){
             $.ajax({
                 type: "POST",
@@ -142,12 +138,16 @@
                 $(".message-board #content").text(messages.length > 0 ? messages[0].name + "：" + messages[0].content : "暂无留言");
             });
             $(".message-board .left-arrow").click(function(){
-                if(mesgInd > 0) mesgInd -= 1;
-                $(".message-board #content").text(messages[mesgInd].name + "：" + messages[mesgInd].content);
+                if(mesgInd > 0) { 
+                    mesgInd -= 1;
+                    $(".message-board #content").text(messages[mesgInd].name + "：" + messages[mesgInd].content);
+                }
             });
             $(".message-board .right-arrow").click(function(){
-                if(mesgInd < messages.length - 1) mesgInd += 1;
-                $(".message-board #content").text(messages[mesgInd].name + "：" + messages[mesgInd].content);
+                if(mesgInd < messages.length - 1) {
+                    mesgInd += 1;
+                    $(".message-board #content").text(messages[mesgInd].name + "：" + messages[mesgInd].content);
+                }
             });
         });
         
