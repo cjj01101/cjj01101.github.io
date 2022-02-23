@@ -32,9 +32,18 @@
             history.replaceState($.extend(history.state, {scrollTop: scrollY}), null);
         }
 
-        function showHint(content){
-            var hint = "<div>" + content + "</div>";
-            $(hint).appendTo("body");
+        function showPrompt(content, color){
+            var prompt_template = '<div class="prompt">' + content + '</div>';
+            var prompt = $(prompt_template).appendTo("body");
+            prompt.css("background-color", color);
+            prompt.css("top", -prompt.innerHeight());
+            prompt.animate({"top": "30px"}, 200, function() {
+                setTimeout(() => {
+                    prompt.animate({"top": -prompt.innerHeight() + "px"}, 200, function() {
+                        prompt.remove();
+                    })
+                }, 2000);
+            });
         }
 
         $(document).ready(function(){
@@ -71,12 +80,10 @@
 
             $("#main .message-board form").submit(function(event){
                 event.preventDefault();
-                //showHint("good");
                 
                 var target = this;
                 var data = $(this).serializeArray();
                 var inputs = $(this).find("input, textarea");
-                console.log(inputs);
                 
                 $.ajax({
                     type: this.method,
@@ -87,7 +94,7 @@
                         var obj = {};
                         $.each(data, function() { obj[this.name] = this.value; });
                         if(obj.name.trim() === "" || obj.message.trim() === ""){
-                            alert("不能为空");
+                            showPrompt("名字和留言均不能为空", "#ffb0b0");
                             return false;
                         }
                         
@@ -96,10 +103,10 @@
                     },
                     success: function(data) {
                         target.reset();
-                        alert(data.message);
+                        showPrompt(data.message, "#9cffdd");
                     },
                     error: function() {
-                        alert("提交失败。");
+                        showPrompt("提交失败。", "#ffb0b0");
                     },
                     complete: function() {
                         $(inputs).attr("disabled", false);

@@ -213,7 +213,9 @@ body>div{position:relative;}
   position: absolute;
   width: 40px;
   height: 40px;
-  left: 49%;
+  left: 0px;
+  right: 0px;
+  margin: 0 auto;
   bottom: 60px;
   
   animation: move_down 1.5s infinite;
@@ -241,6 +243,17 @@ body>div{position:relative;}
         transform: translatey(0px);
         opacity: 1;
     }
+}
+
+.prompt {
+    display: table;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 0.75em 2em;
+    background-color: #9cffdd;
+    box-shadow: 2px 2px 5px #888888;
 }
 
 #welcome{
@@ -283,6 +296,7 @@ body>div{position:relative;}
 }
 
 #intro .imgbox{
+  position: absolute;
   float: left;
   width: 29%;
 }
