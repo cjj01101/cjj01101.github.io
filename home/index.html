@@ -37,9 +37,9 @@
             var prompt = $(prompt_template).appendTo("body");
             prompt.css("background-color", color);
             prompt.css("top", -prompt.innerHeight());
-            prompt.animate({"top": "30px"}, 200, function() {
+            prompt.animate({"top": "30px"}, 200, function(){
                 setTimeout(() => {
-                    prompt.animate({"top": -prompt.innerHeight() + "px"}, 200, function() {
+                    prompt.animate({"top": -prompt.innerHeight() + "px"}, 200, function(){
                         prompt.remove();
                     })
                 }, 2000);

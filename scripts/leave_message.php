@@ -5,28 +5,39 @@ header('Content-Type:application/json; charset=utf-8');
 $name=$_POST["name"];
 $content=$_POST["message"];
 
-$ret = array("message" => "");
+$retval = array("message" => "");
 
 if(empty($name) || empty($content)){
-    $ret["message"] = "名字和留言均不能为空";
-    die(json_encode($ret));
+    $retval["message"] = "名字和留言均不能为空";
+    die(json_encode($retval));
 }
 
-$file="../data/message.xml";
-$doc = new DOMDocument();
-$doc->load($file);
+$url="postgres://manlvbqpkpdqli:1f690c90d16fd894dde0b412539f556b8cf329f08b167e20c01c202ac9b868df@ec2-52-0-114-209.compute-1.amazonaws.com:5432/de4hhuagqnmkd2";
+$dbinfo = parse_url($url);
 
-$root=$doc->documentElement;
-$message=$doc->createElement("message");
-$root->appendChild($message);
+$host = "host=$dbinfo[host]";
+$port = "port=$dbinfo[port]";
+$dbname = "dbname=".substr($dbinfo["path"],1);
+$user = "user=$dbinfo[user]";
+$password = "password=$dbinfo[pass]";
 
-$mname=$doc->createElement("name",$name);
-$mcont=$doc->createElement("content",$content);
-$message->appendChild($mname);
-$message->appendChild($mcont);
+$db = pg_connect("$host $port $dbname $user $password")
+or die("Connection Failed.");
 
-$doc->save($file);
+$query = <<<SQL
+    INSERT INTO guestbook (name, content) VALUES ('$name', '$content');
+SQL;
 
-$ret["message"] = "欢迎{$name}！留言成功，内容为：{$content}";
-echo json_encode($ret);
+$ret = pg_query($db, $query);
+
+if(!$ret) {
+    echo pg_last_error($db);
+    pg_close($db);
+    exit;
+}
+
+pg_close($db);
+
+$retval["message"] = "欢迎{$name}！留言成功，内容为：{$content}";
+echo json_encode($retval);
 ?>
