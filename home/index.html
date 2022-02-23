@@ -46,6 +46,22 @@
             });
         }
 
+        function leaveMessage(){
+
+        }
+
+        function fetchMessages(success){
+            $.ajax({
+                type: "POST",
+                url: "/scripts/fetch_message.php",
+                dataType: "json",
+                success: success,
+                error: function() {
+                    showPrompt("获取留言数据失败。", "#ffb0b0");
+                },
+            });
+        }
+
         $(document).ready(function(){
             $(".fixed-btn").click(function(){
                 $("html,body").animate({scrollTop: 0}, 300);
@@ -77,7 +93,11 @@
                 }
                 $("html,body").animate({scrollTop: history.state.scrollTop || 0}, 500);
             }
-
+            
+            //留言处理
+            var messages;
+            var mesgInd = 0;
+            
             $("#main .message-board form").submit(function(event){
                 event.preventDefault();
                 
@@ -104,6 +124,9 @@
                     success: function(data) {
                         target.reset();
                         showPrompt(data.message, "#9cffdd");
+                        fetchMessages(function(data) {
+                            messages = data;
+                        });
                     },
                     error: function() {
                         showPrompt("提交失败。", "#ffb0b0");
@@ -112,6 +135,19 @@
                         $(inputs).attr("disabled", false);
                     },
                 });
+            });
+
+            fetchMessages(function(data) {
+                messages = data;
+                $(".message-board #content").text(messages.length > 0 ? messages[0].name + "：" + messages[0].content : "暂无留言");
+            });
+            $(".message-board .left-arrow").click(function(){
+                if(mesgInd > 0) mesgInd -= 1;
+                $(".message-board #content").text(messages[mesgInd].name + "：" + messages[mesgInd].content);
+            });
+            $(".message-board .right-arrow").click(function(){
+                if(mesgInd < messages.length - 1) mesgInd += 1;
+                $(".message-board #content").text(messages[mesgInd].name + "：" + messages[mesgInd].content);
             });
         });
         
@@ -191,6 +227,11 @@
                 <textarea name="message" placeholder="可以在这里说点什么哦（但不要超过300字）" maxlength="300"></textarea>
                 <input type="submit" value="提交">
             </form>
+            <div class="message centerflex">
+                <p class="left-arrow"></p>
+                <span id="content">留言显示</span>
+                <p class="right-arrow"></p>
+            </div>
         </div>
     </div>
     

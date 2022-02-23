@@ -122,6 +122,43 @@ body>div{position:relative;}
   background-color: #ffffffc0;
 }
 
+.message-board .message{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50px;
+  padding: 1.5em 3em;
+  background-color: #ffffffa0;
+  border: solid #eeeeee 2px;
+  border-radius: 5px;
+}
+
+.message-board .left-arrow, .message-board .right-arrow{
+  position: absolute;
+  content: "";
+  border: 1.5em solid transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.message-board .left-arrow {
+  left: -100px;
+  border-right-color: #ffffff;
+}
+
+.message-board .right-arrow {
+  right: -100px;
+  border-left-color: #ffffff;
+}
+
+.message-board .left-arrow:hover {
+  border-right-color: #ffffffc0;
+}
+
+.message-board .right-arrow:hover {
+  border-left-color: #ffffffc0;
+}
+
 .navi-wrapper{
   position: fixed;
   top: 80px;
@@ -249,7 +286,6 @@ body>div{position:relative;}
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    margin: 0 auto;
     padding: 0.75em 2em;
     background-color: #9cffdd;
     box-shadow: 2px 2px 5px #888888;
