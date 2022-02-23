@@ -1,11 +1,15 @@
 <?php
 
+header('Content-Type:application/json; charset=utf-8');
+
 $name=$_POST["name"];
 $content=$_POST["message"];
 
+$ret = array("message" => "");
+
 if(empty($name) || empty($content)){
-    echo "名字和留言内容均不能为空。".PHP_EOL;
-    die();
+    $ret["message"] = "名字和留言均不能为空";
+    die(json_encode($ret));
 }
 
 $file="../data/message.xml";
@@ -23,6 +27,6 @@ $message->appendChild($mcont);
 
 $doc->save($file);
 
-echo "欢迎".$name."！留言成功，内容为：".$content;
-
+$ret["message"] = "欢迎{$name}！留言成功，内容为：{$content}";
+echo json_encode($ret);
 ?>

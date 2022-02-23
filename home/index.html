@@ -32,6 +32,11 @@
             history.replaceState($.extend(history.state, {scrollTop: scrollY}), null);
         }
 
+        function showHint(content){
+            var hint = "<div>" + content + "</div>";
+            $(hint).appendTo("body");
+        }
+
         $(document).ready(function(){
             $(".fixed-btn").click(function(){
                 $("html,body").animate({scrollTop: 0}, 300);
@@ -66,18 +71,38 @@
 
             $("#main .message-board form").submit(function(event){
                 event.preventDefault();
+                //showHint("good");
+                
                 var target = this;
+                var data = $(this).serializeArray();
+                var inputs = $(this).find("input, textarea");
+                console.log(inputs);
+                
                 $.ajax({
                     type: this.method,
                     url: this.action,
-                    data: $(this).serialize(),
-                    //dataType: "json",
+                    data: data,
+                    dataType: "json",
+                    beforeSend: function(){
+                        var obj = {};
+                        $.each(data, function() { obj[this.name] = this.value; });
+                        if(obj.name.trim() === "" || obj.message.trim() === ""){
+                            alert("不能为空");
+                            return false;
+                        }
+                        
+                        $(inputs).attr("disabled", true);
+                        return true;
+                    },
                     success: function(data) {
                         target.reset();
-                        alert("留言成功！");
+                        alert(data.message);
                     },
-                    error: function(){
+                    error: function() {
                         alert("提交失败。");
+                    },
+                    complete: function() {
+                        $(inputs).attr("disabled", false);
                     },
                 });
             });
