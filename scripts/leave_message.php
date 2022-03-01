@@ -15,28 +15,40 @@ if(empty($name) || empty($content)){
 $url="postgres://manlvbqpkpdqli:1f690c90d16fd894dde0b412539f556b8cf329f08b167e20c01c202ac9b868df@ec2-52-0-114-209.compute-1.amazonaws.com:5432/de4hhuagqnmkd2";
 $dbinfo = parse_url($url);
 
-$host = "host=$dbinfo[host]";
-$port = "port=$dbinfo[port]";
-$dbname = "dbname=".substr($dbinfo["path"],1);
-$user = "user=$dbinfo[user]";
-$password = "password=$dbinfo[pass]";
+$host = $dbinfo["host"];
+$port = $dbinfo["port"];
+$dbname = substr($dbinfo["path"],1);
+$user = $dbinfo["user"];
+$pass = $dbinfo["pass"];
 
-$db = pg_connect("$host $port $dbname $user $password")
-or die("Connection Failed.");
-
-$query = <<<SQL
-    INSERT INTO guestbook (name, content) VALUES ('$name', '$content');
-SQL;
-
-$ret = pg_query($db, $query);
-
-if(!$ret) {
-    echo pg_last_error($db);
-    pg_close($db);
+try {
+    $db = new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $user, $pass);
+} catch (PDOException $e) {
+    $retval["message"] = "发生错误：".$e->getMessage();
+    echo json_encode($retval);
     exit;
 }
 
-pg_close($db);
+$query = <<<SQL
+    INSERT INTO guestbook (name, content) VALUES (:name, :content);
+SQL;
+
+$stmt = $db->prepare($query);
+$stmt->bindParam(':name', $name);
+$stmt->bindParam(':content', $content);
+
+$res = $stmt->execute();
+
+if(!$res) {
+    $retval["message"] = "发生错误：".$db->errorInfo();
+    echo json_encode($retval);
+    $stmt = null;
+    $db = null;
+    exit;
+}
+
+$stmt = null;
+$db = null;
 
 $retval["message"] = "欢迎{$name}！留言成功，内容为：{$content}";
 echo json_encode($retval);

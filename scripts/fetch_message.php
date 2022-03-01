@@ -3,33 +3,41 @@
 $url="postgres://manlvbqpkpdqli:1f690c90d16fd894dde0b412539f556b8cf329f08b167e20c01c202ac9b868df@ec2-52-0-114-209.compute-1.amazonaws.com:5432/de4hhuagqnmkd2";
 $dbinfo = parse_url($url);
 
-$host = "host=$dbinfo[host]";
-$port = "port=$dbinfo[port]";
-$dbname = "dbname=".substr($dbinfo["path"],1);
-$user = "user=$dbinfo[user]";
-$password = "password=$dbinfo[pass]";
+$host = $dbinfo["host"];
+$port = $dbinfo["port"];
+$dbname = substr($dbinfo["path"],1);
+$user = $dbinfo["user"];
+$pass = $dbinfo["pass"];
 
-$db = pg_connect("$host $port $dbname $user $password")
-or die("Connection Failed.");
+try {
+    $db = new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $user, $pass);
+} catch (PDOException $e) {
+    $retval["message"] = "发生错误：".$e->getMessage();
+    echo json_encode($retval);
+    exit;
+}
 
 $query = <<<SQL
     SELECT name, content FROM guestbook;
 SQL;
 
-$res = pg_query($db, $query);
-$mesg = array();
+$stmt = $db->prepare($query);
+
+$res = $stmt->execute();
 
 if(!$res) {
-    echo pg_last_error($db);
-    pg_close($db);
+    $stmt = null;
+    $db = null;
     exit;
 }
 
-while($row = pg_fetch_row($res)){
+$mesg = array();
+while($row=$stmt->fetch()){
     $mesg[] = array("name" => "$row[0]", "content" => "$row[1]");
 }
 
-pg_close($db);
+$stmt = null;
+$db = null;
 
 echo json_encode($mesg);
 

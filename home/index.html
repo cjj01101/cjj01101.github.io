@@ -122,6 +122,7 @@
                         showPrompt(data.message, "#9cffdd");
                         fetchMessages(function(data) {
                             messages = data;
+                            $(".message-board #content").text(messages.length > 0 ? messages[0].name + "：" + messages[0].content : "暂无留言");
                         });
                     },
                     error: function() {
